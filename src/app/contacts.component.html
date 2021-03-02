@@ -1,0 +1,28 @@
+<mat-card>
+    <h1>CONTACT LIST</h1>
+    <mat-card-content>
+  <div>
+ 
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Mobile Number</th>
+                <th>Alternate Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contact of contacts">
+                <td>{{contact.name}}</td>
+                <td>{{contact.address}}</td>
+                <td>{{contact.mobileNumber}}</td>
+                <td>{{contact.alternateNumber}}</td>
+                <td><button mat-raised-button (click)="putContact(contact)">EDIT</button></td>
+                <td><button mat-raised-button (click)="deleteContact(contact)">DELETE</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</mat-card-content>
+</mat-card>
